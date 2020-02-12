@@ -1,5 +1,7 @@
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public abstract class Replace {
     private static String hej_1;
@@ -13,6 +15,17 @@ public abstract class Replace {
     }
 
     public static String replace_1() {
-        return "\n"+hej_1.replaceAll("(?:[\\d]+|[\\n](?=\\n))", "@");
+        /*  Dennis: det funkar inte!! :( */
+        return  hej_1
+                .replaceAll("\\d+", "")
+                .replaceAll("\\n", "");
+    }
+
+    public static String replace_2() {
+        String result = Stream.of(hej_2.replaceAll("[ ]+", " ")
+        .split("\\n"))
+        .map(s -> s.trim())
+        .collect(Collectors.joining("\n"));
+        return result;
     }
 }

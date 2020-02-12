@@ -5,6 +5,7 @@ public class Main {
         System.out.println("birthdate is valid: "+Validate.birthdate("19901205-1234"));
         System.out.println("password is valid: "+Validate.password("i2E4S678"));
 
-        System.out.println(Replace.replace_1());
+        System.out.println("\n"+Replace.replace_1());
+        System.out.println("\n"+Replace.replace_2());
     }
 }
