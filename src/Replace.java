@@ -15,10 +15,8 @@ public abstract class Replace {
     }
 
     public static String replace_1() {
-        /*  Dennis: det funkar inte!! :( */
-        return  hej_1
-                .replaceAll("\\d+", "")
-                .replaceAll("\\n", "");
+        /* Daniel: fungerar fin fint :) */
+        return  hej_1.replaceAll("\\d+|\\s(?=\\s)", "");
     }
 
     public static String replace_2() {
